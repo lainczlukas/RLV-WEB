@@ -1,4 +1,29 @@
-{% extends "base.html" %}
+{% extends "base.html" %} 
+{% block head %} 
+  <link rel="stylesheet" type="text/css"href="{{ url_for('static', filename='styles/intro.css') }}">
+{% endblock %} 
 {% block content %}
-    <h1>Hello za wardo</h1>
+<div class="col-container">
+  <div class="col">
+    <img src="{{ url_for('static', filename='images/intro.png') }}" alt="..." />
+  </div>
+
+  <div class="col">
+    <h2 id="intro-h">Welcome to Reinforcement Learning Visualizer</h2>
+    <h3>Please choose an environment specifications</h3>
+    <div class="slidecontainer">
+      <label for="myRange">Gridworld size</label>
+      <input type="range" min="1" max="100" value="50" class="slider" id="myRange" />
+    </div>
+    <div>
+      <span id="rangeValue">0</span>
+      <Input class="range" type="range" name "" value="0" min="2" max="6" onChange="rangeSlide(this.value)" onmousemove="rangeSlide(this.value)"></Input>
+  </div>
+  <script type="text/javascript">
+      function rangeSlide(value) {
+          document.getElementById('rangeValue').innerHTML = value;
+      }
+  </script>
+  </div>
+</div>
 {% endblock %}

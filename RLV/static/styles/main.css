@@ -1,6 +1,11 @@
+body {
+  background-color: #2A2B2A;
+}
+
+/*footer*/
 .site-footer
 {
-  background-color:#26272b;
+  background-color:#C0C781;
   padding:45px 0 20px;
   font-size:15px;
   line-height:24px;
@@ -160,4 +165,9 @@
     margin-right:0;
     font-weight:600
   }
+}
+
+/*navbar*/
+.navbar-bg {
+  background-color: #C0C781;
 }
